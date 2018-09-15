@@ -3,6 +3,7 @@ package com.xsm.androidexperience;
 import com.xsm.androidexperience.collection.ArrayList;
 import com.xsm.androidexperience.collection.ArrayStack;
 import com.xsm.androidexperience.collection.LinkedList;
+import com.xsm.androidexperience.collection.LinkedQueue;
 
 import org.junit.Test;
 
@@ -112,6 +113,24 @@ public class ExampleUnitTest {
 //        for (int i = 0; i < 20; i++) {
 //            stack.push(i);
 //        }
+
+    }
+
+    @Test
+    public void testLinkedQueue() {
+        LinkedQueue<Integer> queue = new LinkedQueue<>();
+        for (int i = 0; i < 5; i++) {
+            queue.add(i);
+        }
+        System.out.println("队列的大小为" + queue.size());
+
+        System.out.println("队头为" + queue.peek());
+
+        System.out.println("出对一个元素=" + queue.poll());
+        System.out.println("队列的大小为" + queue.size());
+
+        System.out.println("队头为" + queue.peek());
+
 
     }
 
