@@ -1,5 +1,10 @@
 package com.xsm.androidexperience.collection;
 
+/**
+ * 自实现双向链表 LinkedList ，参照jdk1.7 ，自实现的目的是为了更好的理解链表，
+ * 所以就实现了最常用的功能，有兴趣的同学可以继续扩展。
+ * @param <E>
+ */
 public class LinkedList<E> implements Collection<E> {
 
     private int size = 0;

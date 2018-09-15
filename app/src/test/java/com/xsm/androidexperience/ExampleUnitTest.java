@@ -1,6 +1,7 @@
 package com.xsm.androidexperience;
 
 import com.xsm.androidexperience.collection.ArrayList;
+import com.xsm.androidexperience.collection.ArrayStack;
 import com.xsm.androidexperience.collection.LinkedList;
 
 import org.junit.Test;
@@ -54,6 +55,7 @@ public class ExampleUnitTest {
 
         System.out.println("数组的内容=" + list.toString());
 
+        //越界测试
 //        list.add(25, "25");
     }
 
@@ -86,7 +88,31 @@ public class ExampleUnitTest {
 
         System.out.println("数组的内容=" + list.toString());
 
+        //越界测试
 //        list.add(25, "25");
+    }
+
+    @Test
+    public void testArrayStack() {
+        ArrayStack<Integer> stack = new ArrayStack<>();
+        System.out.println("是否空栈" + stack.isEmpty());
+
+        for (int i = 0; i < 5; i++) {
+            stack.push(i + 1);
+        }
+        System.out.println("栈顶元素为" + stack.peek().toString());
+        System.out.println("栈的所有元素为" + stack.toString());
+
+        System.out.println("出栈元素为" + stack.pop().toString());
+
+        System.out.println("栈顶元素为" + stack.peek().toString());
+        System.out.println("栈的所有元素为" + stack.toString());
+
+//        //栈溢出测试
+//        for (int i = 0; i < 20; i++) {
+//            stack.push(i);
+//        }
+
     }
 
 
