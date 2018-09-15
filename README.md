@@ -1,19 +1,18 @@
 ### Java-Android-Learn
-本库包含了我对java和Android的学习、知识总结、Bug fix等等，本着开源和分享的精神，把我做开发几年来遇到的对我来说很重要的东西贡献给大家。<br/>
+Welcome to the Java-Android-Learn wiki! 大家好，我是夏胜明。Java-Android-Learn 库记录着我从大学code到毕业做开发以来遇到的知识总结、学习心得和重大Bug fix等等，以前这些东西全是记录在印象笔记，后来在开发的过程中学习了不少优秀的开源作品，也沉淀了不少知识，渐渐萌生了分享的想法，于是就诞生了这个库。<br/>
 
-[知识总结、开发经验等，请看WIKI](https://github.com/Xiasm/Java-Android-Learn/wiki)
+[我的沥血分享，请点击查看wiki](https://github.com/Xiasm/Java-Android-Learn/wiki)
+
+#### 我的博客
+[我的掘金专栏](https://juejin.im/user/583d8f7467f356006bbaa7e4)
 <br/>
 
-[顺序表代表ArrayList自实现](https://github.com/Xiasm/Java-Android-Learn/blob/master/collection/src/main/java/com/xsm/androidexperience/collection/ArrayList.java)
-<br/>
-
-[双向链表代表LinkedList自实现](https://github.com/Xiasm/Java-Android-Learn/blob/master/collection/src/main/java/com/xsm/androidexperience/collection/LinkedList.java)
-<br/>
-
-[顺序表栈结构自实现](https://github.com/Xiasm/Java-Android-Learn/blob/master/collection/src/main/java/com/xsm/androidexperience/collection/ArrayStack.java)
+[我的简书博客](https://www.jianshu.com/u/0118cb80b772)
 <br/>
 
 ##### 备注
-本库中所有文章不允许抄袭，如有发现，将追究责任。如果有同学需转发等，请在显要位置声明源地址，并欢迎联系我。<br/>
-email：xiasem@163.com<br/>
-微信:xsm0824mn003
+本库中所有文章、code及链接的文章全属作者原创或玉刚说投稿，未经作者允许不得抄袭，转载请邮箱或微信联系我。<br/>
+##### 联系方式
+email_1：xiasem@163.com<br/>
+email_2:devxiasm@gmail.com<br/>
+微信号：xsm0824mn003
