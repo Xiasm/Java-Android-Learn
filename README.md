@@ -8,8 +8,11 @@
 <br/>
 
 [双向链表代表LinkedList自实现](https://github.com/Xiasm/Java-Android-Learn/blob/master/collection/src/main/java/com/xsm/androidexperience/collection/LinkedList.java)
-
 <br/>
+
+[顺序表栈结构自实现](https://github.com/Xiasm/Java-Android-Learn/blob/master/collection/src/main/java/com/xsm/androidexperience/collection/ArrayStack.java)
+<br/>
+
 ##### 备注
 本库中所有文章不允许抄袭，如有发现，将追究责任。如果有同学需转发等，请在显要位置声明源地址，并欢迎联系我。<br/>
 email：xiasem@163.com<br/>
