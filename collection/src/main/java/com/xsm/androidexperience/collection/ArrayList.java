@@ -115,7 +115,7 @@ public class ArrayList<E> implements Collection<E> {
     }
 
 
-    private int indexOf(Object o) {
+    public int indexOf(Object o) {
         if (o == null) {
             for (int i = 0; i < size; i++) {
                 if (elementData[i] == null) {

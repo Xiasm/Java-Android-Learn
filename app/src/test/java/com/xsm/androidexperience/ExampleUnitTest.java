@@ -1,6 +1,7 @@
 package com.xsm.androidexperience;
 
 import com.xsm.androidexperience.collection.ArrayList;
+import com.xsm.androidexperience.collection.LinkedList;
 
 import org.junit.Test;
 
@@ -25,7 +26,7 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void test1() {
+    public void testArrayList() {
         ArrayList<String> list = new ArrayList<>();
         list.add("1");
         System.out.println("添加第一个元素后，数组的长度=" + list.size());
@@ -53,5 +54,40 @@ public class ExampleUnitTest {
 
         System.out.println("数组的内容=" + list.toString());
 
+//        list.add(25, "25");
     }
+
+    @Test
+    public void testLinkedList() {
+        LinkedList<String> list = new LinkedList<>();
+        list.add("1");
+        System.out.println("添加第一个元素后，数组的长度=" + list.size());
+
+        String testStr = null;
+        for (int i = 0; i < 19; i++) {
+            String element = String.valueOf(i + 2);
+            list.add(element);
+            if (i == 1) {
+                testStr = element;
+            }
+        }
+        System.out.println("继续添加19个元素后，数组的长度=" + list.size());
+
+        String s = list.get(3);
+        System.out.println("数组的第四个元素是" + s);
+
+        boolean remove = list.remove(testStr);
+        if (remove) {
+            System.out.println("删除的元素是" + testStr);
+        }
+
+        list.add(0, "0");
+        System.out.println("继续添加1个元素后，数组的长度=" + list.size());
+
+        System.out.println("数组的内容=" + list.toString());
+
+//        list.add(25, "25");
+    }
+
+
 }
