@@ -4,6 +4,7 @@ import com.xsm.androidexperience.collection.ArrayList;
 import com.xsm.androidexperience.collection.ArrayStack;
 import com.xsm.androidexperience.collection.LinkedList;
 import com.xsm.androidexperience.collection.LinkedQueue;
+import com.xsm.androidexperience.map.HashTable;
 
 import org.junit.Test;
 
@@ -137,8 +138,21 @@ public class ExampleUnitTest {
 
     @Test
     public void testHashTable() {
+        HashTable<Integer, String> table = new HashTable<>(10);
+        for (int i = 0; i < 5; i++) {
+            table.put(i + 1, String.valueOf(i + 1));
+        }
+        System.out.println(table.toString());
 
+        System.out.println("获取key=5的value为" + table.get(5));
 
+        table.clear();
+        System.out.println(table.toString());
+
+        for (int i = 1; i <= 30; i++) {
+            table.put(i, String.valueOf(i));
+        }
+        System.out.println(table);
     }
 
 

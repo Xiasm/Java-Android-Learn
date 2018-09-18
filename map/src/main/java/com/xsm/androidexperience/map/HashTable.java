@@ -1,10 +1,7 @@
 package com.xsm.androidexperience.map;
 
 /**
- * Author: 夏胜明
- * Date: 2018/9/18 0018
- * Email: xiasem@163.com
- * Description:
+ * 自己实现HashTable，hash算法为hashMap对key的hash()算法值得绝对值取余容量。
  */
 public class HashTable<K, V> implements Map<K, V> {
     static final int MAXIMUM_CAPACITY = 1 << 30;
@@ -56,7 +53,7 @@ public class HashTable<K, V> implements Map<K, V> {
 
     @Override
     public void clear() {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < table.length; i++) {
             Node<K, V> node = table[i];
             while (node != null) {
                 Node<K, V> thisNode = node;
@@ -66,6 +63,7 @@ public class HashTable<K, V> implements Map<K, V> {
                 thisNode.value = null;
                 thisNode.next = null;
             }
+            table[i] = null;
         }
     }
 
@@ -117,6 +115,7 @@ public class HashTable<K, V> implements Map<K, V> {
         Node<K, V> topNode = table[hash];
         if (topNode == null) {
             topNode = new Node<>(hash, key, value, null);
+            table[hash] = topNode;
         } else {
             Node<K, V> x = topNode;
             while (x != null) {
@@ -170,5 +169,22 @@ public class HashTable<K, V> implements Map<K, V> {
         public void setValue(V value) {
             this.value = value;
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("{");
+        for (int i = 0; i < table.length; i++) {
+            builder.append("[");
+            Node<K, V> topNode = table[i];
+            while (topNode != null) {
+                builder.append("{").append("key=").append(topNode.key).append(",value=").append(topNode.value).append("}");
+                topNode = topNode.next;
+            }
+            builder.append("]");
+        }
+        builder.append("}");
+        return builder.toString();
     }
 }
