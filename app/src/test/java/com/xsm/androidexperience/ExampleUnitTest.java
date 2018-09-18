@@ -7,6 +7,8 @@ import com.xsm.androidexperience.collection.LinkedQueue;
 
 import org.junit.Test;
 
+import java.util.Hashtable;
+
 import static org.junit.Assert.*;
 
 /**
@@ -22,9 +24,8 @@ public class ExampleUnitTest {
 
     @Test
     public void test() {
-        int a = 5;
-        int b = a + (a >> 1);
-        System.out.println("a=" + a + "    b=" + b);
+        System.out.println(-12 % 10);
+        System.out.println(12 % 10);
     }
 
     @Test
@@ -130,6 +131,12 @@ public class ExampleUnitTest {
         System.out.println("队列的大小为" + queue.size());
 
         System.out.println("队头为" + queue.peek());
+
+
+    }
+
+    @Test
+    public void testHashTable() {
 
 
     }
