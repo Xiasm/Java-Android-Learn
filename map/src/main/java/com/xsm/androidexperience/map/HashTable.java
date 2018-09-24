@@ -119,6 +119,10 @@ public class HashTable<K, V> implements Map<K, V> {
         } else {
             Node<K, V> x = topNode;
             while (x != null) {
+                if (x.hash == hash && (x.key == key || x.key.equals(key))) {
+                    x.value = value;
+                    break;
+                }
                 if (x.next == null) {
                     x.next = new Node<K, V>(hash, key, value, null);
                     break;

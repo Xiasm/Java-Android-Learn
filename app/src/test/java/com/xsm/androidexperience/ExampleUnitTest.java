@@ -145,6 +145,8 @@ public class ExampleUnitTest {
         System.out.println(table.toString());
 
         System.out.println("获取key=5的value为" + table.get(5));
+        table.put(5, "100");
+        System.out.println("获取key=5的value为" + table.get(5));
 
         table.clear();
         System.out.println(table.toString());

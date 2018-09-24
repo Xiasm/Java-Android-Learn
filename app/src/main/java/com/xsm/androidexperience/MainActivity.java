@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         Queue queue = new LinkedBlockingQueue();
 
-
+        HashMap<String, String> map = new HashMap<>();
+        map.put("", "");
     }
 }
