@@ -1,1 +1,1 @@
-include ':app', ':collection', ':map'
+include ':app', ':collection', ':map', ':tree'

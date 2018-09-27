@@ -28,4 +28,5 @@ dependencies {
     implementation project(':collection')
     implementation project(':map')
     testCompile project(path: ':map')
+    implementation project(':tree')
 }

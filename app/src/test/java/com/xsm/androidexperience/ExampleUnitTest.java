@@ -5,6 +5,7 @@ import com.xsm.androidexperience.collection.ArrayStack;
 import com.xsm.androidexperience.collection.LinkedList;
 import com.xsm.androidexperience.collection.LinkedQueue;
 import com.xsm.androidexperience.map.HashTable;
+import com.xsm.androidexperience.tree.BinaryTree;
 
 import org.junit.Test;
 
@@ -157,5 +158,17 @@ public class ExampleUnitTest {
         System.out.println(table);
     }
 
+
+    @Test
+    public void binaryTreeTest() {
+        BinaryTree binaryTree = new BinaryTree("A");
+        binaryTree.createTree();
+        System.out.println("前序遍历：");
+        binaryTree.preOrderTraverse(binaryTree.getRoot());
+        System.out.println("中序遍历：");
+        binaryTree.midOrderTraverse(binaryTree.getRoot());
+        System.out.println("后序遍历：");
+        binaryTree.postOrderTraverse(binaryTree.getRoot());
+    }
 
 }

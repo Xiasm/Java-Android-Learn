@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/collection" />
             <option value="$PROJECT_DIR$/map" />
+            <option value="$PROJECT_DIR$/tree" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
