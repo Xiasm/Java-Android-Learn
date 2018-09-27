@@ -1,5 +1,7 @@
 package com.xsm.androidexperience.tree;
 
+import java.util.Stack;
+
 public class BinaryTree {
     Node<String> root;
 
@@ -22,30 +24,75 @@ public class BinaryTree {
         if (root == null) {
             return;
         }
-        System.out.println(root.data);
+        System.out.print(root.data);
         preOrderTraverse(root.leftChild);
         preOrderTraverse(root.rightChild);
-
     }
 
+    /**
+     * 前序遍历，利用栈实现
+     * 其实栈实现利用的思想还是递归，只不过上面的递归是jvm实现的方法栈
+     */
+    public void preOrderTraverseByStack(Node root) {
+        if (root == null) {
+            return;
+        }
+        Stack<Node<String>> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node<String> node = stack.pop();
+            System.out.print(node.data);
+            if (node.rightChild != null) {
+                stack.push(node.rightChild);
+            }
+            if (node.leftChild != null) {
+                stack.push(node.leftChild);
+            }
+        }
+    }
 
+    /**
+     * 中序遍历，递归算法
+     */
     public void midOrderTraverse(Node root) {
         if (root == null) {
             return;
         }
         midOrderTraverse(root.leftChild);
-        System.out.println(root.data);
+        System.out.print(root.data);
         midOrderTraverse(root.rightChild);
     }
 
+    public void midOrderTraverseByStack(Node root) {
+        if (root == null) {
+            return;
+        }
+        Stack<Node<String>> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            while (stack.peek().leftChild != null) {
+                stack.push(stack.peek().leftChild);
+            }
+            while (!stack.isEmpty()) {
+                Node<String> node = stack.pop();
+                System.out.print(node.data);
+                if (node.rightChild != null) {
+                    stack.push(node.rightChild);
+                }
+            }
+        }
+    }
 
+    /**
+     * 后序遍历，递归算法
+     */
     public void postOrderTraverse(Node root) {
         if (root == null) {
             return;
         }
         postOrderTraverse(root.leftChild);
         postOrderTraverse(root.rightChild);
-        System.out.println(root.data);
+        System.out.print(root.data);
     }
 
     /**

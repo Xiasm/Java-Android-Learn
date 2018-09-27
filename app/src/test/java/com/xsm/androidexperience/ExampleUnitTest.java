@@ -165,8 +165,17 @@ public class ExampleUnitTest {
         binaryTree.createTree();
         System.out.println("前序遍历：");
         binaryTree.preOrderTraverse(binaryTree.getRoot());
+        System.out.println();
+        System.out.println("前序遍历-栈实现：");
+        binaryTree.preOrderTraverseByStack(binaryTree.getRoot());
+        System.out.println();
         System.out.println("中序遍历：");
         binaryTree.midOrderTraverse(binaryTree.getRoot());
+        System.out.println();
+        System.out.println("中序遍历-栈实现：");
+        binaryTree.midOrderTraverseByStack(binaryTree.getRoot());
+        System.out.println();
+
         System.out.println("后序遍历：");
         binaryTree.postOrderTraverse(binaryTree.getRoot());
     }
