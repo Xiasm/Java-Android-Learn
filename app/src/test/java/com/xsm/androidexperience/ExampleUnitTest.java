@@ -6,6 +6,7 @@ import com.xsm.androidexperience.collection.LinkedList;
 import com.xsm.androidexperience.collection.LinkedQueue;
 import com.xsm.androidexperience.map.HashTable;
 import com.xsm.androidexperience.tree.BinaryTree;
+import com.xsm.androidexperience.tree.SearchBinaryTree;
 
 import org.junit.Test;
 
@@ -178,6 +179,16 @@ public class ExampleUnitTest {
 
         System.out.println("后序遍历：");
         binaryTree.postOrderTraverse(binaryTree.getRoot());
+    }
+
+    @Test
+    public void searchBinaryTreeTest() {
+        int[] arrays = {12, 3 ,23, 5 ,8, 1, 19};
+        SearchBinaryTree tree = new SearchBinaryTree();
+        for(int i: arrays) {
+            tree.put(i);
+        }
+        tree.midOrderTraverse(tree.getRoot());
     }
 
 }
