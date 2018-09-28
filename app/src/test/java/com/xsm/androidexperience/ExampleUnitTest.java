@@ -189,6 +189,14 @@ public class ExampleUnitTest {
             tree.put(i);
         }
         tree.midOrderTraverse(tree.getRoot());
+
+
+        System.out.println();
+        SearchBinaryTree.TreeNode node = tree.searchNode(5);
+        System.out.println(node != null ? node.data : null);
+
+        tree.removeNode(node);
+        tree.midOrderTraverse(tree.getRoot());
     }
 
 }
