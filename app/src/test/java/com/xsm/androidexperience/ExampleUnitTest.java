@@ -5,11 +5,17 @@ import com.xsm.androidexperience.collection.ArrayStack;
 import com.xsm.androidexperience.collection.LinkedList;
 import com.xsm.androidexperience.collection.LinkedQueue;
 import com.xsm.androidexperience.map.HashTable;
+import com.xsm.androidexperience.proxy.CodeWorker;
+import com.xsm.androidexperience.proxy.TeachWorker;
+import com.xsm.androidexperience.proxy.Worker;
+import com.xsm.androidexperience.proxy.dynamicProxy.DynamicProxy;
+import com.xsm.androidexperience.proxy.staticProxy.WorkerAgent;
 import com.xsm.androidexperience.tree.BinaryTree;
 import com.xsm.androidexperience.tree.SearchBinaryTree;
 
 import org.junit.Test;
 
+import java.lang.reflect.Proxy;
 import java.util.Hashtable;
 
 import static org.junit.Assert.*;
@@ -199,4 +205,16 @@ public class ExampleUnitTest {
         tree.midOrderTraverse(tree.getRoot());
     }
 
+    @Test
+    public void proxyTest() {
+//        new WorkerAgent(new CodeWorker()).work();
+//        new WorkerAgent(new TeachWorker()).work();
+
+        DynamicProxy invocationHandler = new DynamicProxy(new CodeWorker());
+        //加上这句将会产生一个$Proxy0.class文件，这个文件即为动态生成的代理类文件
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
+
+        ((Worker) Proxy.newProxyInstance(Worker.class.getClassLoader(), new Class[]{Worker.class}, invocationHandler)).work();
+
+    }
 }
