@@ -1,5 +1,6 @@
 package com.xsm.androidexperience;
 
+import com.example.xiasm.arithmetic.BinarySearch;
 import com.xsm.androidexperience.collection.ArrayList;
 import com.xsm.androidexperience.collection.ArrayStack;
 import com.xsm.androidexperience.collection.LinkedList;
@@ -216,5 +217,12 @@ public class ExampleUnitTest {
 
         ((Worker) Proxy.newProxyInstance(Worker.class.getClassLoader(), new Class[]{Worker.class}, invocationHandler)).work();
 
+    }
+
+    @Test
+    public void binSearchTest() {
+        int[] src = new int[]{0, 1, 3, 4, 5, 7, 8, 9, 12};
+        int i = BinarySearch.binSearch(src, 6, 0, src.length - 1);
+        System.out.println("索引为:" + i);
     }
 }

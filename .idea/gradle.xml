@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/arithmetic" />
             <option value="$PROJECT_DIR$/collection" />
             <option value="$PROJECT_DIR$/map" />
             <option value="$PROJECT_DIR$/proxy" />

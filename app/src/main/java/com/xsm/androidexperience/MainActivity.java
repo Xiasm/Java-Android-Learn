@@ -1,5 +1,6 @@
 package com.xsm.androidexperience;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -22,5 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         HashMap<String, String> map = new HashMap<>();
         map.put("", "");
+
+        startActivity(new Intent());
     }
 }

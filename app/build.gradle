@@ -30,4 +30,5 @@ dependencies {
     testCompile project(path: ':map')
     implementation project(':tree')
     implementation project(':proxy')
+    implementation project(':arithmetic')
 }
