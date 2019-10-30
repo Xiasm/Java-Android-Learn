@@ -1,1 +1,1 @@
-include ':app', ':collection', ':map', ':tree', ':proxy', ':arithmetic'
+include ':app', ':collection', ':map', ':tree', ':proxy', ':arithmetic', ':Algorithms'

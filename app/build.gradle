@@ -31,4 +31,5 @@ dependencies {
     implementation project(':tree')
     implementation project(':proxy')
     implementation project(':arithmetic')
+    implementation project(':Algorithms')
 }
